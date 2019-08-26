@@ -1,7 +1,7 @@
 import imapclient
 import pprint
 import imaplib
-impor time
+import time
 imaplib._MAXLINE = 10000000
 
 
