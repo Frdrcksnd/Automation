@@ -1,7 +1,9 @@
 import imapclient
 import pprint
 import imaplib
+impor time
 imaplib._MAXLINE = 10000000
+
 
 user_name =input("Enter your email address and press enter: ")
 password = input("Enter your password and press enter: ")
@@ -20,7 +22,9 @@ def main():
         server.select_folder('INBOX', readonly=False)
         UIDs = server.search(['UNSEEN'])
 
-        print(len(UIDs))
+        num = len(UIDs)
+        print(f"You have {num} unread messages")
+        time.sleep(2)
 
     except Exception as exc:
         print(f"There was an error: {exc}")
